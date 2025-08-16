@@ -28,19 +28,27 @@ while get_first_condition == True:
        passing_number = 2
        break
 def next_turn(player):
-   if player == player_1
+   if player == player_1:
      return player_2
-   if player == player_2
-     return player_1
-   
+   if player == player_2:
+     return player_1  
 while condition == True:
-  get_player = input("Perfect! "+next_player.name+" please enter the next number")
+  get_player = input("Perfect! "+ next_player.name +" please enter the next number")
   if (passing_number % number == 0) :
-     if (get_player) != 'Hooop':
-        passing_number += 1
-#This is a new version
-# A FILE CONDITION 
+    if (get_player) != 'Hooop':
+      next_player.hearts -= 1
+      print(next_player.name + " u have lost a heart now u have "+ str(next_player.hearts) + " hearts!")
+  if (passing_number % number != 0):
+    if int(get_player) != passing_number:
+      next_player.hearts -= 1
+      print(next_player.name + " u have lost a heart now u have "+ str(next_player.hearts) + "hearts!")
+  passing_number += 1
+  if(next_player.hearts == 0):
+    print((next_turn(next_player)).name + " wins the game!")
+    break
+  next_player = next_turn(next_player)
 
   
+
 
 
